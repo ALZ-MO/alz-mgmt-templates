@@ -16,7 +16,7 @@ jobs:
   plan:
     name: Plan with Terraform
     runs-on:
-      ubuntu-latest
+      self-hosted
     concurrency: mgmt-tfstate
     environment: alz-mgmt-plan
     permissions:
@@ -89,7 +89,7 @@ jobs:
     needs: plan
     name: Apply with Terraform
     runs-on:
-      ubuntu-latest
+      self-hosted
     concurrency: mgmt-tfstate
     environment: alz-mgmt-apply
     permissions:
